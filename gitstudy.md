@@ -79,7 +79,7 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 
    git commit -m "上传至github"
 
-   git push
+   git push origin master
 
 ### 获取其他人的远程仓库
 
