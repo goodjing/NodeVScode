@@ -19,6 +19,13 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 
 - 修改文件保存后，运行 git status 查看变化
 - 运行 git diff 查看文件变化具体内容，其默认和最新的commit比较
-- 撤销更改：git checkout -- 
+- 撤销更改：git checkout -- （撤销本地文件）
 
 ![文件添加](E:\NodeVScode\picgit\image_20221114102657.png)
+
+#### 版本回退
+
+- 运行 git log，查看版本号
+- 开始回退：运行 git reset --hard xxxxxxx （取版本号前七位即可）
+
+![版本回退](E:\NodeVScode\picgit\image_20221114104432.png)
