@@ -43,4 +43,40 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 
 ![版本回退](E:\NodeVScode\picgit\image_20221114104432.png)
 
-- git reflog，可以看到HEAD的变化情况，随后可以用reset --hard回到最新版本。
+- git reflog，可以看到HEAD的变化情况，随后可以用reset --hard回到最新版本。  
+
+### Git和Github的关联
+
+1. 本地配置用户名和邮箱（已配置过的可以跳过
+
+   git config --global user.name "你的用户名"
+
+   git config --global user.email "1611767852@qq.com"
+
+2. 生成 ssh key
+
+   运行 ssh-keygen -t rsa -C "1611767852@qq.com"
+
+   将生成的 ssh key 复制到剪贴板后执行 clip < ~/.ssh/id_rsa.pub
+
+3. 打开Github，进入settings，点击左边的 SSH and GPG keys后，将ssh key 粘贴到右边的Key中，点击Add SSH key后添加成功。
+
+4. 在Git Bash Here中执行 ssh -T git@github.com 即可。
+
+5. 创建远程仓库与本地关联：github中，点击右上角加号，New repository，接着输入远程仓库名，点击Create repository创建好。
+
+6. 现在Github上复制远程仓库的SSH地址，然后执行：
+
+   git remote add origin 你复制的地址
+
+7. 如果创建 repository 的时候，加入了 README.md 或者 LICENSE ，需要先执行  git pull origin master
+
+8. 否则执行 git push -u origin master，将本地仓库上传至Github的仓库
+
+9. 上传至git仓库：
+
+   git add -A
+
+   git commit -m "上传至github"
+
+   git push
