@@ -17,12 +17,11 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 
   > - 如果文件名是中文，运行 `git status` 会乱码：  
   >  若要使其显示中文，执行：`git config --global core.quotepath false`，再执行 `git status` 
-    
+  
   > - 如果 `git log` 也会乱码：  
   > `git config --global i18n.commitencoding utf-8`  
-  > `git config --global i18n.logoutputencoding utf-8`
+  > `git config --global i18n.logoutputencoding utf-8`  
   >
-  >   
 
 #### 文件添加和提交
 
