@@ -75,5 +75,5 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 2. 执行：`git clone` 复制的SSH地址
 3. 取消掉与别人的仓库远程链接：`git remote rm origin` 
 4. 链接自己的远程链接：  
-   `git remote add origin git@github.com:goodjing/NodeVScode.git`
+   `git remote add origin git@github.com:liovoij/TestUse.git`
 5. 自己的 github 创建一个新的仓库后，`git push -u origin master`
