@@ -50,17 +50,23 @@ https://orangex4.cool/post/notes-in-markdown/
 
 代码块语法:
 
-''' python
+''' python  
+
 print("Hello, World!")
-'''
+
+'''  
+
+:::  告警  
+xxxx  
+:::  
 
 请将 ' 替换成 `.
 
 ---
 
-[超链接名称](链接地址)
+[超链接名称：百度](https://www.baidu.com/)
 
-![图片提示语](图片地址)
+![图片提示语](.\picgit\image-20221114095435236.png)
 
 ---
 
