@@ -50,11 +50,11 @@ https://orangex4.cool/post/notes-in-markdown/
 
 代码块语法:
 
-''' python  
-
-print("Hello, World!")
-
-'''  
+```json
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
 
 :::  告警  
 xxxx  
