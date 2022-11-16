@@ -18,7 +18,7 @@ pm.test("Successful POST request", function () {
     pm.expect(pm.response.code).to.be.oneOf([201,202]);
     //检查响应码是否为201或者202
 });
-```  
+```
 
 - 判断状态码名称(也就是状态码后面的描述)是否包含某个字符串：Status code：code name has string
 
@@ -27,7 +27,7 @@ pm.test("Status code name has string", function () {
     pm.response.to.have.status("OK");
     //断言响应状态消息包含OK
 });
-```  
+```
 ### 响应内容断言
 - 断言响应体中包含XXX字符串：Response body:Contains string
 
@@ -35,7 +35,7 @@ pm.test("Status code name has string", function () {
 pm.test("Body matches string", function () {
     pm.expect(pm.response.text()).to.include("string_you_want_to_search");
 });
-``` 
+```
 
 - 响应结果如果是json，断言响应体(json)中某个键名对应的值：Response body : JSON value check
 
@@ -46,7 +46,7 @@ pm.test("Your test name", function () {
     pm.expect(jsonData.value).to.eql(100);
     //获取jsonData中键名为value的值，然后和100进行比较
 });
-```  
+```
 【示例】
 ```json
 pm.test("msg", function () {
