@@ -103,3 +103,70 @@ var age = jsonData.reponse.person.age;
 ```
 
 ## 常用断言对应的脚本
+
+### 清除一个环境变量
+
+```json
+postman.clearEnvironmentVariable("variable_key");
+```
+### 断言响应数据中是否存在某个元素
+
+```json
+tests["//断言返回的数据中是否存在__pid__这个元素"] = responseBody.has("pid");
+```
+
+### 断言response等于预期内容
+
+```json
+tests["Body is correct"] = responseBody === "response_body_string";
+```
+
+### 断言json解析后的key的值等于预期内容
+
+```json
+tests["Args key contains argument passed as url parameter"] = 'test' in responseJSON.args
+```
+
+### 检查response的header信息是否有被测字段
+
+```json
+tests["Content-Type is present"] = postman.getResponseHeader("Content-Type");
+```
+
+### 校验响应数据中，返回的数据类型
+
+```json
+var jsonData = JSON.parse(responseBody);
+//第一步先转化为json字符串。其中变量(jsonData)可以自行定义......
+tests["//data.category.name__valuse的值的类型是不是string"] = typeof(jsonData.data.category[0].name) == "string";
+```
+
+### 响应时间判断
+
+```json
+tests["Response time is less than 200ms"] = responseTime < 200;
+```
+
+### 设置环境变量
+
+```json
+postman.setEnvironmentVariable("variable_key", "variable_value");
+```
+
+### 断言状态码
+
+```json
+tests["Status code is 200"] = responseCode.code != 400;
+```
+
+### 检查响应码name
+
+```json
+tests["Status code name has string"] = responseCode.name.has("Created");
+```
+
+### 断言成功的post请求返回码
+
+```json
+tests["Successful POST request"] = responseCode.code === 201 || responseCode.cod
+```
