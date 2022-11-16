@@ -99,7 +99,7 @@ pm.test("Response time is less than 200ms", function () {
 //第一步将响应转为 jsonData 对象
 jsonData = pm.response.json();
 //第二步通过 . 获取到我们想要的 age 的值
-var age = jsonData.reponse.person.age; 
+var age = jsonData.reponse.person.age;
 ```
 
 ## 常用断言对应的脚本
