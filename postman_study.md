@@ -83,25 +83,86 @@ pm.test("Response time is less than 200ms", function () {
 });
 ```
 
-### 任何响应需要转为JsonData 对象
+### 任何响应需要转为JsonData 对象  
+
+- 多层json嵌套，获取user_id的值
 ```json
-{  
-"reponse": {    
-"person": {      
-   "name": "hai",      
-   "age": 18    
-         }  
-       }
+{
+    "code": 0,
+    "message": "请求成功！",
+    "data": {
+        "user_id": "1252163151781167104"
+    }
 }
 ```
-若要获取age需要：
 ```json
-//第一步将响应转为 jsonData 对象
-jsonData = pm.response.json();
-//第二步通过 . 获取到我们想要的 age 的值
-var age = jsonData.reponse.person.age;
-```
+// 获取json体数据
+var jsonData = pm.response.json();
+// 获取user_id的值,通过.获取
+var user_id = jsonData.data.user_id
+```  
 
+- json中存在列表，获取points中的第二个元素  
+```json
+{
+    "code": 0,
+    "message": "请求成功！",
+    "data": {
+        "roles": {
+            "api": [
+                "API-USER-DELETE"
+            ],
+            "points": [
+                "point-user-delete",
+                "POINT-USER-UPDATE",
+                "POINT-USER-ADD"
+            ]
+        },
+        "authCache": null
+    }
+}
+```
+```json
+//获取json体数据
+var jsonData = pm.response.json()
+// 获取user_id的值,通过下标获取列表中某个元素
+var user_id = jsonData.data.roles.points[1]
+```  
+
+- 列表中取最后一个元素  
+```json
+{
+    "code": 0,
+    "message": "请求成功！",
+    "data": {
+        "total": 24,
+        "rows": [
+           
+            {
+                "id": "1066370498633486336",
+                "mobile": "15812340003",
+                "username": "zbz"
+            },
+            {
+                "id": "1071632760222810112",
+                "mobile": "16612094236",
+                "username": "llx"
+            },
+            ...
+            {
+                "id": "1075383133106425856",
+                "mobile": "13523679872",
+                "username": "test001",
+       
+            }]
+}
+```
+```json
+//获取json体数据
+var jsonData = pm.response.json()
+// 获取id的值,通过slice(-1)获取列表中最后一个元素。
+var id = jsonData.data.rows.slice(-1)[0]
+```
 ## 常用断言对应的脚本
 
 ### 清除一个环境变量
