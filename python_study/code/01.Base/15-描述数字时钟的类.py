@@ -34,7 +34,7 @@ class Clock(object):
 
 
 def main():
-    clock = Clock(23, 59, 58)
+    clock = Clock(23, 59, 59)
     while True:
         print(clock.show())
         sleep(1)
