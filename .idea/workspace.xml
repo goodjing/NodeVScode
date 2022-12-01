@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/10-百钱百鸡.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/11-赌博游戏.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/12-函数实现最大公约数和最小公倍数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/13-判断是否回文数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/14-判断是否素数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_study/code/01.Base/15-描述数字时钟的类.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_study/01.基础语法-案例.md" beforeDir="false" afterPath="$PROJECT_DIR$/python_study/01.基础语法-案例.md" afterDir="false" />
     </list>
@@ -90,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669864376450</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'">
+      <created>1669865298754</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669865298754</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
