@@ -1,16 +1,14 @@
 # postman断言
 ## 常见断言方法
 ### 状态码断言
-- 判断接口响应的状态码：Status code: code is 200  
-  
+- 判断接口响应的状态码：Status code: code is 200
 ```json
-pm.test("Status code is 200", function () {
-    //Status code is 200是断言名称，可以自行修改
-    pm.response.to.have.status(200);
-    //这里填写的200是预期结果，实际结果是请求返回结果
+pm.test("Status code is 200",function(){
+    //断言内容，可以修改
+    pm.respons.to.have.status(200);
+    //200是预期结果
 });
 ```
-
 - 判断接口响应码是否与预期集合中的某个值一致
   
 ```json
