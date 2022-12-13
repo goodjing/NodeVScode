@@ -146,7 +146,7 @@ var user_id = jsonData.data.roles.points[1]
                 "mobile": "16612094236",
                 "username": "llx"
             },
-            ...
+            //...
             {
                 "id": "1075383133106425856",
                 "mobile": "13523679872",
