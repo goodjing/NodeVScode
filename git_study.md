@@ -73,7 +73,8 @@ https://www.cnblogs.com/schaepher/p/5561193.html
 
 1. 复制别人远程仓库的SSH
 2. 执行：`git clone` 复制的SSH地址
-3. 取消掉与别人的仓库远程链接：`git remote rm origin` 
-4. 链接自己的远程链接：  
-   `git remote add origin git@github.com:liovoij/TestUse.git`
-5. 自己的 github 创建一个新的仓库后，`git push -u origin master`
+3. 查看连接的仓库：`git remote -v`
+4. 取消掉与别人的仓库远程链接：`git remote rm origin` 
+5. 链接自己的远程链接：  
+   `git remote add origin git@github.com:liovoij/Notes.git`
+6. 自己的 github 创建一个新的仓库后，`git push -u origin master`
