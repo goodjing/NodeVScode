@@ -269,3 +269,52 @@ var test = pm.request.body.formdata.get('test') //获取接口参数
 pm.request.body.formdata.remove('test') //移除原参数
 pm.request.body.formdata.add({'key':'test','value':Md5Encrypt(test)}) //添加加密后的参数
 ```
+### 举例
+对含参数文本处理思路：
+1. 先获取原始文本
+2. 通过替换方法修改参数变量
+3. 再进行加密处理
+4. 将加密后的文本替换进原来的请求body
+
+**原始body**
+```json
+{
+"loginUrl":"https://{{url_ip}}:7443/login.html",
+"userName": "{{dandian_name}}",
+"password": "{{dandian_password}}"
+}
+```
+**加密处理**
+```json
+/**
+ * 加密
+ * 当前不需要对秘钥与body进行
+ */
+function aesEncrypt(srcs,key){
+    // var key  = CryptoJS.enc.Utf8.parse(keyStr);  无需进行解码
+    // var srcs = CryptoJS.enc.Utf8.parse(date);
+    // console.log('content srcs:'+srcs);
+    // console.log('content key:'+key);
+    var encrypted = CryptoJS.AES.encrypt(srcs, key, {mode:CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7});
+    return encrypted.toString();
+}
+ 
+/**秘钥 */
+const Vkey ="xded+=xdee239sdd";
+var Vbody=pm.request.body.raw;
+console.log('原始body:'+Vbody);
+Vbody = Vbody.replace('{{url_ip}}',pm.environment.get("url_ip"));
+Vbody = Vbody.replace('{{dandian_name}}',pm.environment.get("dandian_name"));
+Vbody = Vbody.replace('{{dandian_password}}',pm.environment.get("dandian_password"));
+console.log('处理参数:'+Vbody);
+ 
+//加密
+encryptDate=aesEncrypt(Vbody,Vkey);
+console.log('body加密后:'+encryptDate);
+ 
+//请求修改body
+pm.request.body.update({mode: 'raw',raw:encryptDate});
+ 
+//修改后的body
+console.log('真实body:'+pm.request.body.raw);
+```
