@@ -1,4 +1,4 @@
-# postman断言  
+# postman断言
 ## 常见断言方法
 ### 状态码断言
 - 判断接口响应的状态码：Status code: code is 200  
@@ -230,4 +230,42 @@ tests["Status code name has string"] = responseCode.name.has("Created");
 
 ```json
 tests["Successful POST request"] = responseCode.code === 201 || responseCode.cod
+```
+
+## 加密与解密
+### ASE加密
+比如要加密请求body中的test的值。
+```json
+function AesEncrypt(data,secret_key){
+    //将AES加密写成有一个方法
+    var ECBOptions = {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7};//密码，文本，偏移量、模式等设置
+    var AesSecert = CryptoJS.enc.Utf8.parse(secret_key);//加密密码
+    var data_enc = CryptoJS.AES.encrypt(data, AesSecert, ECBOptions).toString()
+    //CryptoJS.AES.encrypt()是AES加密方法，对应的还有AES解密方法CryptoJS.AES.decrypt()
+    return data_enc //返回加密后的数据，格式为字符串
+}
+var test = pm.request.body.formdata.get('test') //获取接口参数，body中form-data格式的参数
+pm.request.body.formdata.remove('test') //移除原参数
+pm.request.body.formdata.add({'key':'test','value':AesEncrypt(test,'ABCDEFGHIjklmnop')}) //调用加密方法，并把加密后的结果作为test的value重新加入body中
+```
+### ASE解密
+```json
+var body = responseBody
+var AES_key= "QWERTYUIOPASDFGH" //设置秘钥
+var ECBOptions = {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7};//设置偏移量、模式等设置
+var AesSecert = CryptoJS.enc.Utf8.parse(AES_key);//秘钥为Utf-8格式，需要先解码为十六进制数
+var data_dec = CryptoJS.AES.decrypt(body, AesSecert, ECBOptions)//调用crypto-js中解密的方法
+var data_dec_str = data_dec.toString(CryptoJS.enc.Utf8)//再将解密后的结果转为字符串且为UTF-8格式
+console.log("解密之后的结果:",data_dec_str)
+```
+### MD5加密
+```json
+function Md5Encrypt(value){
+    // MD5加密
+    var val_md5 = CryptoJS.MD5(value).toString()
+    return val_md5 //返回加密后的数据
+}
+var test = pm.request.body.formdata.get('test') //获取接口参数
+pm.request.body.formdata.remove('test') //移除原参数
+pm.request.body.formdata.add({'key':'test','value':Md5Encrypt(test)}) //添加加密后的参数
 ```
