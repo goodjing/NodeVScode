@@ -11,7 +11,7 @@ pm.test("Status code is 200",function(){
 ```
 - 判断接口响应码是否与预期集合中的某个值一致
   
-```json
+```
 pm.test("Successful POST request", function () {
     pm.expect(pm.response.code).to.be.oneOf([201,202]);
     //检查响应码是否为201或者202
@@ -20,7 +20,7 @@ pm.test("Successful POST request", function () {
 
 - 判断状态码名称(也就是状态码后面的描述)是否包含某个字符串：Status code：code name has string
 
-```json
+```
 pm.test("Status code name has string", function () {
     pm.response.to.have.status("OK");
     //断言响应状态消息包含OK
@@ -29,7 +29,7 @@ pm.test("Status code name has string", function () {
 ### 响应内容断言
 - 断言响应体中包含XXX字符串：Response body:Contains string
 
-```json
+```
 pm.test("Body matches string", function () {
     pm.expect(pm.response.text()).to.include("string_you_want_to_search");
 });
@@ -37,7 +37,7 @@ pm.test("Body matches string", function () {
 
 - 响应结果如果是json，断言响应体(json)中某个键名对应的值：Response body : JSON value check
 
-```json
+```
 pm.test("Your test name", function () {
     var jsonData = pm.response.json();
     //获取响应体，以json显示，赋值给jsonData .注意：该响应体必须返会是的json，否则会报错  
@@ -46,7 +46,7 @@ pm.test("Your test name", function () {
 });
 ```
 【示例】
-```json
+```
 pm.test("msg", function () {
     var jsonDate = pm.response.json();
     pm.expect(jsonDate.msg).to.eql("订单分配负责人出错!");
@@ -55,7 +55,7 @@ pm.test("msg", function () {
 
 - 断言响应体等于XXX字符串：Response body : is equal to a string
 
-```json
+```
 pm.test("Body is correct", function () {
     pm.response.to.have.body("response_body_string");
     //获取响应体等于response_body_string
@@ -65,7 +65,7 @@ pm.test("Body is correct", function () {
 ### 响应头断言
 - 断言响应头包含：Response headers:Content-Type header check
 
-```json
+```
 pm.test("Content-Type is present", function () {
     pm.response.to.have.header("Content-Type");
     //断言响应头存在"Content-Type"
@@ -75,7 +75,7 @@ pm.test("Content-Type is present", function () {
 ### 响应速度断言
 - 判断实际响应时间是否与低于预期时间：Response time is less than 200ms
 
-```json
+```
 pm.test("Response time is less than 200ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(200);
 });
@@ -84,7 +84,7 @@ pm.test("Response time is less than 200ms", function () {
 ### 任何响应需要转为JsonData 对象  
 
 - 多层json嵌套，获取user_id的值
-```json
+```
 {
     "code": 0,
     "message": "请求成功！",
@@ -93,7 +93,7 @@ pm.test("Response time is less than 200ms", function () {
     }
 }
 ```
-```json
+```
 // 获取json体数据
 var jsonData = pm.response.json();
 // 获取user_id的值,通过.获取
@@ -120,7 +120,7 @@ var user_id = jsonData.data.user_id
     }
 }
 ```
-```json
+```
 //获取json体数据
 var jsonData = pm.response.json()
 // 获取user_id的值,通过下标获取列表中某个元素
@@ -155,7 +155,7 @@ var user_id = jsonData.data.roles.points[1]
             }]
 }
 ```
-```json
+```
 //获取json体数据
 var jsonData = pm.response.json()
 // 获取id的值,通过slice(-1)获取列表中最后一个元素。
@@ -165,36 +165,36 @@ var id = jsonData.data.rows.slice(-1)[0]
 
 ### 清除一个环境变量
 
-```json
+```
 postman.clearEnvironmentVariable("variable_key");
 ```
 ### 断言响应数据中是否存在某个元素
 
-```json
+```
 tests["//断言返回的数据中是否存在__pid__这个元素"] = responseBody.has("pid");
 ```
 
 ### 断言response等于预期内容
 
-```json
+```
 tests["Body is correct"] = responseBody === "response_body_string";
 ```
 
 ### 断言json解析后的key的值等于预期内容
 
-```json
+```
 tests["Args key contains argument passed as url parameter"] = 'test' in responseJSON.args
 ```
 
 ### 检查response的header信息是否有被测字段
 
-```json
+```
 tests["Content-Type is present"] = postman.getResponseHeader("Content-Type");
 ```
 
 ### 校验响应数据中，返回的数据类型
 
-```json
+```
 var jsonData = JSON.parse(responseBody);
 //第一步先转化为json字符串。其中变量(jsonData)可以自行定义......
 tests["//data.category.name__valuse的值的类型是不是string"] = typeof(jsonData.data.category[0].name) == "string";
@@ -202,38 +202,38 @@ tests["//data.category.name__valuse的值的类型是不是string"] = typeof(jso
 
 ### 响应时间判断
 
-```json
+```
 tests["Response time is less than 200ms"] = responseTime < 200;
 ```
 
 ### 设置环境变量
 
-```json
+```
 postman.setEnvironmentVariable("variable_key", "variable_value");
 ```
 
 ### 断言状态码
 
-```json
+```
 tests["Status code is 200"] = responseCode.code != 400;
 ```
 
 ### 检查响应码name
 
-```json
+```
 tests["Status code name has string"] = responseCode.name.has("Created");
 ```
 
 ### 断言成功的post请求返回码
 
-```json
+```
 tests["Successful POST request"] = responseCode.code === 201 || responseCode.cod
 ```
 
 ## 加密与解密
 ### ASE加密
 比如要加密请求body中的test的值。
-```json
+```
 function AesEncrypt(data,secret_key){
     //将AES加密写成有一个方法
     var ECBOptions = {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7};//密码，文本，偏移量、模式等设置
@@ -247,7 +247,7 @@ pm.request.body.formdata.remove('test') //移除原参数
 pm.request.body.formdata.add({'key':'test','value':AesEncrypt(test,'ABCDEFGHIjklmnop')}) //调用加密方法，并把加密后的结果作为test的value重新加入body中
 ```
 ### ASE解密
-```json
+```
 var body = responseBody
 var AES_key= "QWERTYUIOPASDFGH" //设置秘钥
 var ECBOptions = {mode: CryptoJS.mode.ECB,padding: CryptoJS.pad.Pkcs7};//设置偏移量、模式等设置
@@ -257,7 +257,7 @@ var data_dec_str = data_dec.toString(CryptoJS.enc.Utf8)//再将解密后的结�
 console.log("解密之后的结果:",data_dec_str)
 ```
 ### MD5加密
-```json
+```
 function Md5Encrypt(value){
     // MD5加密
     var val_md5 = CryptoJS.MD5(value).toString()
@@ -283,7 +283,7 @@ pm.request.body.formdata.add({'key':'test','value':Md5Encrypt(test)}) //添加�
 }
 ```
 **加密处理**
-```json
+```
 /**
  * 加密
  * 当前不需要对秘钥与body进行
