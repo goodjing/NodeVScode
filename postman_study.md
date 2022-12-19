@@ -231,7 +231,7 @@ tests["Successful POST request"] = responseCode.code === 201 || responseCode.cod
 
 ## 预处理
 ### 去除json参数注释
-``` json
+```
 //  去除json参数注释方法
 GlobalJsonMinify = function (json) {
 
