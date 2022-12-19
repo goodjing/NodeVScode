@@ -148,7 +148,7 @@ vars.put("sceneRecommendList",sceneRecommendList.toString());
 - 测试模式：attendance.sign_in
   
 **BeanShell预处理程序**
-```
+```java
 import java.util.Date;
 import java.util.Calendar;
 import java.text.Format;
