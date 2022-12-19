@@ -80,7 +80,8 @@ HTTP请求：（可使用公共变量）
 
 **取样器**
 - HTTP请求：GET
-- 参数：test=${query}
+- 参数：test=${query}  
+
 【Response返回BeanShell后置处理程序】
 ```
 import java.util.Collection;
