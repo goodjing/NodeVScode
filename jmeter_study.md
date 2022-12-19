@@ -78,11 +78,11 @@ HTTP请求：（可使用公共变量）
 **固定定时器**
 - 线程延迟（毫秒）：5000
 
-**取样器**
+#### 取样器
 - HTTP请求：GET
 - 参数：test=${query}  
 
-【Response返回BeanShell后置处理程序】
+**Response返回BeanShell后置处理程序**
 ```
 import java.util.Collection;
 import java.util.Iterator;
@@ -141,4 +141,165 @@ List sceneRecommendList = new ArrayList();
 log.info("sceneRecommendList:"+sceneRecommendList.toString());
 vars.put("sceneRecommendList",sceneRecommendList.toString());
 }
+```
+**添加断言**
+- JMeter Variable Name to use：intentInfo_name
+- 测试字段：响应文本
+- 测试模式：attendance.sign_in
+  
+**BeanShell预处理程序**
+```
+import java.util.Date;
+import java.util.Calendar;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+
+public class DateUtil {
+
+	
+    public static String getCurrentTime() { 
+    		//设置日期格式
+          SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+          // new Date()为获取当前系统时间
+          Date date = new Date();
+          String CurrentTime = df.format(date);
+          return CurrentTime;
+    }
+
+
+	public static String getTodayDate(){
+		//设置日期格式
+          SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+          Date date = new Date();
+          String today = df.format(date);
+          return today;
+		}
+
+
+	public static String getTomorrowDate(){
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+          Date date = new Date();
+          Calendar c = Calendar.getInstance();
+          c.setTime(date);
+          c.add(Calendar.DAY_OF_MONTH,1);//今天+1天
+          Date tomorrow_date = c.getTime();
+          String tomorrow = df.format(tomorrow_date);
+          return tomorrow;		
+		}
+
+	public static String getYesterdayDate(){
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+          Date date = new Date();
+          Calendar c = Calendar.getInstance();
+          c.setTime(date);
+		c.add(Calendar.DAY_OF_MONTH,-1);//今天-1天
+		Date yesterday_date = c.getTime();
+          String yesterday = df.format(yesterday_date);
+          return yesterday;
+		}
+
+
+	//获取某一天的开始00:00
+	public static String getSomeDayFirstTime(String day){
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date=new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.set(Calendar.HOUR_OF_DAY, 0);
+		c.set(Calendar.MINUTE, 0);
+		c.set(Calendar.SECOND,0);
+		c.set(Calendar.MILLISECOND, 0);
+		c.add(Calendar.DAY_OF_MONTH,Integer.parseInt(day));//某天
+		Date someday = c.getTime();
+		String someDayFirstTime = df.format(someday);
+		return someDayFirstTime;
+		
+	}
+
+	//获取某一天的结束23:59:59
+	public static String getSomeDayEndTime(String day){
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date=new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.set(Calendar.HOUR_OF_DAY, 0);
+		c.set(Calendar.MINUTE, 0);
+		c.set(Calendar.SECOND,0);
+		c.set(Calendar.MILLISECOND, 0);
+		c.add(Calendar.DAY_OF_MONTH, (Integer.parseInt(day))+1);
+		c.add(Calendar.MILLISECOND, -1);
+		Date someday = c.getTime();
+		String someDayEndTime = df.format(someday);
+		return someDayEndTime;
+	}
+
+	//获取本月的第一天的00:00:00
+	public static String getMonthFirstTime(){
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date=new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.set(Calendar.DAY_OF_MONTH,1);////本月第一天
+		c.set(Calendar.HOUR_OF_DAY, 0);
+		c.set(Calendar.MINUTE, 0);
+		c.set(Calendar.SECOND,0);
+		c.set(Calendar.MILLISECOND, 0);
+		Date monthFirst = c.getTime();
+		String monthFirstTime = df.format(monthFirst);
+		return monthFirstTime;
+	}
+
+	//获取本月最后一天的23:59:59
+	public static String getMonthEndTime(){
+		
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.DAY_OF_MONTH, 1);
+		c.set(Calendar.HOUR_OF_DAY, 0);
+		c.set(Calendar.MINUTE, 0);
+		c.set(Calendar.SECOND,0);
+		c.set(Calendar.MILLISECOND, 0);
+		c.add(Calendar.MONTH, 1);
+		c.add(Calendar.MILLISECOND, -1);
+		Date monthEnd = c.getTime();
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String MonthEndTime = df.format(monthEnd);
+		return MonthEndTime;
+	}
+
+	public static String getLastTime() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.DAY_OF_MONTH, 1);
+		calendar.set(Calendar.HOUR_OF_DAY, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND,0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		calendar.add(Calendar.MONTH, 1);
+		calendar.add(Calendar.MILLISECOND, -1);
+		Date edate = calendar.getTime();
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return format.format(edate);
+	}
+	    
+}
+
+
+ log.info("TodayDate:"+DateUtil.getTodayDate());
+ vars.put("TodayDate",DateUtil.getTodayDate()); 
+
+ 
+ log.info("TodayFirstTime:"+DateUtil.getSomeDayFirstTime("0"));
+ log.info("TodayEndTime:"+DateUtil.getSomeDayEndTime("0"));
+ vars.put("TodayFirstTime",DateUtil.getSomeDayFirstTime("0"));  
+ vars.put("TodayEndTime",DateUtil.getSomeDayEndTime("0")); 
+
+ log.info("TomorrowFirstTime:"+DateUtil.getSomeDayFirstTime("1"));
+ log.info("TomorrowEndTime:"+DateUtil.getSomeDayEndTime("1"));
+ vars.put("TomorrowFirstTime",DateUtil.getSomeDayFirstTime("1"));  
+ vars.put("TomorrowEndTime",DateUtil.getSomeDayEndTime("1")); 
+ 
+
+ log.info("MonthFirstTime:"+DateUtil.getMonthFirstTime());
+ log.info("MonthEndTime:"+DateUtil.getMonthEndTime());
+ vars.put("MonthFirstTime",DateUtil.getMonthFirstTime());  
+ vars.put("MonthEndTime",DateUtil.getMonthEndTime()); 
 ```
