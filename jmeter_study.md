@@ -1,4 +1,4 @@
-## Web接口测试
+## 迅速调试接口
 ### 配置元件：HTTP信息头管理器
 用于存储登录信息等
 | 名称 | 值 |
@@ -28,10 +28,10 @@
 **监听器**
 常用的是`查看结果树`、`用表格查看结果`等。
 
-## vConsole接口测试
+## 接口测试案例一
 以小e为例。
 ### 配置元件：用户定义的变量
-可以存储发送请求的公共变量
+可以存储发送请求的公共变量：
 | 名称 | 值 |
 | --- | ---- |
 | protocol | https |
@@ -46,7 +46,7 @@
 | isVoiceInput | true |
 | mobiletoken | "" |
 | faqPath | /easst/faq/execute_easst?method=faq |
-还可以存储测试用的语料所在位置
+还可以存储测试用的语料所在位置：
 | 名称 | 值 | 描述 |
 | --- | ---- | --- |
 | pathofBin | C:\Users\Administrator\Desktop\标准场景 | 语料所在的位置 |
