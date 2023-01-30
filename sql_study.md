@@ -8,13 +8,6 @@
 
 ## 数据表操作
 ### 创建表
-```
-create table 表名(
-  字段名 类型 约束,
-  字段名 类型 约束
-  ...
-)
-```
 **例：创建学生表**
 姓名(长度为10)， 年龄， 身高(保留小数点2位) 
 ``` sql
@@ -37,9 +30,6 @@ drop table if exists students
 
 ## 数据操作-增删改查
 ### 简单查询
-``` 
-select * from 表名
-```
 **例：查询所有学生数据**
 ```sql
 select * from students
@@ -49,9 +39,6 @@ select * from students
 **格式一：**
 所有字段设置值， 值的顺序与表中字段的顺序对应
 - 说明：主键列是自动增长， 插入时需要占位， 通常使用0或者 default 或者 null 来占位， 插入成功后以实际数据为准 
-```
-insert into 表名 values(...) 
-```
 **例：插入一个学生， 设置所有字段的信息**
 ``` sql
 insert into students values(0,'亚瑟',22,177.56)
@@ -71,34 +58,22 @@ insert into students values(0,'亚瑟2',23,167.56)
 ```
 **方式二：写一条insert语句，设置多条数据，数据之间用英文逗号隔开**
 **格式一：**
-```
-insert into 表名 values(...),(...)...
-```
 **例：插入多个学生，设置所有字段的信息**
 ``` sql
 insert into students values(0,'亚瑟3',23,167.56),(0,'亚瑟4',23,167.56)
 ```
 **格式二：**
-```
-insert into 表名(列1,...) values(值1,...),(值1,...)...
-```
 **例：插入多个学生， 只设置姓名**
 ``` sql
 insert into students(name) values('老夫子5'),('老夫子6')
 ```
 ### 修改
-```
-update 表名 set 列1=值1,列2=值2... where 条件 
-```
 **例：修改id为5的学生数据，**姓名改为 狄仁杰， 年龄改为 20 
 ```sql
 update students set name='狄仁杰',age=20 where id=5
 ```
 ### 删除
 **格式一：**
-```
-delete from 表名 where 条件
-```
 **例：删除id为6的学生数据**
 ```sql
 delete from students where id=6
@@ -126,18 +101,12 @@ select * from students where isdelete=0
 ```
 
 **格式二：**
-```
-truncate table 表名（删除表的所有数据， 保留表结构）
-```
 **例：删除学生表的所有数据**
 ```sql
 truncate table students
 ```
 
 **格式三：**
-```
-drop table 表名（删除表， 所有数据和表结构都删掉）
-```
 **例：删除学生表**
 ```sql
 drop table students
@@ -185,11 +154,6 @@ insert into students values
 ('012', '孙膑', '男', '新疆', '26', '3班', '340322199000297655');
 ```
 ### 查询的基本语法
-```
-select * from 表名
-和
-select 字段1,字段2,... from 表名
-```
 **例：查询全部字段和部分字段**
 ```sql
 select * from students;
