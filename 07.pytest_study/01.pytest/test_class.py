@@ -1,4 +1,6 @@
 # test_class.py
+import pytest
+
 
 class TestClass:
     def test_one(self):
@@ -9,3 +11,6 @@ class TestClass:
         x = "hello"
         assert hasattr(x, 'hello')
 
+
+if __name__ == "__main__":
+    pytest.main('-q test_class.py')
