@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/test_01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/test_02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/test_03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/test_o4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/run_all_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08.unittest_study/01.unittest简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/08.unittest_study/01.unittest简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/01.unittest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/02.selenium+unittest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/03.unittest执行顺序.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +54,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\NodeVScode\08.unittest_study\code\02.unittest批量执行\unittest批量执行示例\case" />
       <recent name="E:\NodeVScode\08.unittest_study\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.03.unittest执行顺序">
+  <component name="RunManager" selected="Python 测试.Unittest (unittest批量执行示例 内)">
     <configuration name="01.unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python 测试 (01.unittest.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python 测试 (E:/NodeVScode/08.unittest_study/code/01.unittest.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,16 +136,32 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittest (unittest批量执行示例 内)" type="tests" factoryName="Unittests" nameIsGenerated="true">
+      <module name="NodeVScode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.02.selenium+unittest" />
       <item itemvalue="Python.01.unittest" />
       <item itemvalue="Python.001IF语句" />
       <item itemvalue="Python.03.unittest执行顺序" />
-      <item itemvalue="Python 测试.Python 测试 (01.unittest.py 内)" />
+      <item itemvalue="Python 测试.Unittest (unittest批量执行示例 内)" />
+      <item itemvalue="Python 测试.Python 测试 (E:/NodeVScode/08.unittest_study/code/01.unittest.py 内)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.Python 测试 (01.unittest.py 内)" />
+        <item itemvalue="Python 测试.Python 测试 (E:/NodeVScode/08.unittest_study/code/01.unittest.py 内)" />
       </list>
     </recent_temporary>
   </component>
