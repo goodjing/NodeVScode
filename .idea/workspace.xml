@@ -4,7 +4,9 @@
     <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/08.unittest_study/01.unittest简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/08.unittest_study/01.unittest简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/02.test.py" beforeDir="false" afterPath="$PROJECT_DIR$/08.unittest_study/code/02.selenium+unittest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/01.unittest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/02.selenium+unittest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/08.unittest_study/code/03.unittest执行顺序.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/NodeVScode/08.unittest_study/code/03.unittest执行顺序.py",
+    "last_opened_file_path": "E:/NodeVScode/08.unittest_study/code/01.unittest简介/03.unittest执行顺序.py",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
 }]]></component>
@@ -55,11 +57,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/01.unittest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,11 +78,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\NodeVScode\08.unittest_study\code\02.selenium+unittest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/02.selenium+unittest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,11 +99,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/03.unittest执行顺序.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/03.unittest执行顺序.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
