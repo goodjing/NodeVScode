@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/test_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/baidu/test_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/test_03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/case/blog/test_o4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/report/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例/run_all_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.unittest_study/code/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
