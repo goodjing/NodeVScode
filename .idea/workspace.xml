@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield异常.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield异常.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/NodeVScode/07.pytest_study/code/02_pytest前后置操作",
+    "last_opened_file_path": "E:/NodeVScode/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
 }]]></component>
@@ -46,112 +48,7 @@
       <recent name="E:\NodeVScode\08.unittest_study\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.Python 测试 (test_yield异常.py 内)">
-    <configuration name="01.unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/01.unittest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="02.selenium+unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/02.selenium+unittest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="03.装饰器执行顺序" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/03.装饰器执行顺序.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="03.unittest执行顺序" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/01.unittest简介/03.unittest执行顺序.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="04.unittest断言" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/08.unittest_study/code/04.unittest断言.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python 测试.Python 测试 (test_yield.py 内)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,18 +70,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python 测试 (pytest前后置操作 内)" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+    <configuration name="test_yield" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="D:\Anaconda3\envs\NodeVScode\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python 测试 (test_conftest02.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -243,21 +147,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest (unittest批量执行示例 内)" type="tests" factoryName="Unittests" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_pattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/08.unittest_study/code/02.unittest批量执行/unittest批量执行示例&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -289,24 +178,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.02.selenium+unittest" />
-      <item itemvalue="Python.01.unittest" />
-      <item itemvalue="Python.001IF语句" />
-      <item itemvalue="Python.03.unittest执行顺序" />
-      <item itemvalue="Python.03.装饰器执行顺序" />
-      <item itemvalue="Python.04.unittest断言" />
-      <item itemvalue="Python 测试.Python 测试 (pytest前后置操作 内)" />
-      <item itemvalue="Python 测试.Unittest (unittest批量执行示例 内)" />
+      <item itemvalue="Python.test_yield" />
       <item itemvalue="Python 测试.Python 测试 (test_conftest02.py 内)" />
       <item itemvalue="Python 测试.Python 测试 (test_fixture_module.py 内)" />
       <item itemvalue="Python 测试.Python 测试 (test_yield.py 内)" />
-      <item itemvalue="Python 测试.Python 测试 (test_yield异常.py 内)" />
       <item itemvalue="Python 测试.test_fixture_module.test_s1 的 Python 测试" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 测试.Python 测试 (test_yield异常.py 内)" />
         <item itemvalue="Python 测试.Python 测试 (test_yield.py 内)" />
+        <item itemvalue="Python.test_yield" />
         <item itemvalue="Python 测试.Python 测试 (test_fixture_module.py 内)" />
         <item itemvalue="Python 测试.test_fixture_module.test_s1 的 Python 测试" />
         <item itemvalue="Python 测试.Python 测试 (test_conftest02.py 内)" />
