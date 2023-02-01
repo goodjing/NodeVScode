@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_fixture_module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield异常.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/01.pytest简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/01.pytest简介.md" afterDir="false" />
-    </list>
+    <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
