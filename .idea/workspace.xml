@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4faab923-39af-4e37-9c12-b976936e96bf" name="变更" comment="Merge remote-tracking branch 'origin/master'">
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_conftest01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_conftest02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_fixture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_fixture_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield异常.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07.pytest_study/01.pytest简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/01.pytest简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/02_pytest前后置操作/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/02_pytest前后置操作/test_class&amp;function.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_class&amp;function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/02_pytest前后置操作/test_class&amp;method.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_class&amp;method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/02_pytest前后置操作/test_setup_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_setup_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07.pytest_study/code/02_pytest前后置操作/test_setup_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_setup_module.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
       <recent name="E:\NodeVScode\08.unittest_study\code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.Python 测试 (test_conftest02.py 内)">
+  <component name="RunManager" selected="Python 测试.Python 测试 (test_yield异常.py 内)">
     <configuration name="01.unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,34 +191,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python 测试 (test_class&amp;function.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_class\u0026function.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python 测试 (test_conftest01.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="NodeVScode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_conftest01.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python 测试 (test_conftest02.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,7 +205,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python 测试 (test_fixture.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python 测试 (test_fixture_module.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,7 +215,35 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_fixture.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_fixture_module.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python 测试 (test_yield.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NodeVScode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python 测试 (test_yield异常.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NodeVScode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/07.pytest_study/code/01.pytest/pytest前后置操作/test_yield异常.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -285,7 +278,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_conftest02.test_s4 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="test_fixture_module.test_s1 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="NodeVScode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,7 +288,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_conftest02.test_s4&quot;" />
+      <option name="_new_target" value="&quot;test_fixture_module.test_s1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -308,19 +301,19 @@
       <item itemvalue="Python.04.unittest断言" />
       <item itemvalue="Python 测试.Python 测试 (pytest前后置操作 内)" />
       <item itemvalue="Python 测试.Unittest (unittest批量执行示例 内)" />
-      <item itemvalue="Python 测试.Python 测试 (test_class&amp;function.py 内)" />
-      <item itemvalue="Python 测试.Python 测试 (test_conftest01.py 内)" />
       <item itemvalue="Python 测试.Python 测试 (test_conftest02.py 内)" />
-      <item itemvalue="Python 测试.Python 测试 (test_fixture.py 内)" />
-      <item itemvalue="Python 测试.test_conftest02.test_s4 的 Python 测试" />
+      <item itemvalue="Python 测试.Python 测试 (test_fixture_module.py 内)" />
+      <item itemvalue="Python 测试.Python 测试 (test_yield.py 内)" />
+      <item itemvalue="Python 测试.Python 测试 (test_yield异常.py 内)" />
+      <item itemvalue="Python 测试.test_fixture_module.test_s1 的 Python 测试" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 测试.Python 测试 (test_yield异常.py 内)" />
+        <item itemvalue="Python 测试.Python 测试 (test_yield.py 内)" />
+        <item itemvalue="Python 测试.Python 测试 (test_fixture_module.py 内)" />
+        <item itemvalue="Python 测试.test_fixture_module.test_s1 的 Python 测试" />
         <item itemvalue="Python 测试.Python 测试 (test_conftest02.py 内)" />
-        <item itemvalue="Python 测试.test_conftest02.test_s4 的 Python 测试" />
-        <item itemvalue="Python 测试.Python 测试 (test_conftest01.py 内)" />
-        <item itemvalue="Python 测试.Python 测试 (test_fixture.py 内)" />
-        <item itemvalue="Python 测试.Python 测试 (test_class&amp;function.py 内)" />
       </list>
     </recent_temporary>
   </component>
