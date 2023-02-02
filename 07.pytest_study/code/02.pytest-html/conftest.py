@@ -1,20 +1,11 @@
-pytest-html是一个插件，用于生成测试结果的HTML报告。
-
-## 安装 pytest-html 插件
-`pip install pytest-html`
-
-## 报告报错截图
-1. 失败截图可以写到conftest.py文件里，这样用例运行时，只要检测到用例实例，就调用截图的方法，并且把截图存到html报告上
-
-```python
 # conftest.py文件
 # coding:utf-8
 
 from selenium import webdriver
 import pytest
 
-
 driver = None
+
 
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item):
@@ -30,13 +21,14 @@ def pytest_runtest_makereport(item):
     if report.when == 'call' or report.when == "setup":
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = report.nodeid.replace("::", "_")+".png"
+            file_name = report.nodeid.replace("::", "_") + ".png"
             screen_img = _capture_screenshot()
             if file_name:
                 html = '<div><img src="data:image/png;base64,%s" alt="screenshot" style="width:600px;height:300px;" ' \
                        'onclick="window.open(this.src)" align="right"/></div>' % screen_img
                 extra.append(pytest_html.extras.html(html))
         report.extra = extra
+
 
 def _capture_screenshot():
     '''
@@ -54,46 +46,6 @@ def browser(request):
 
     def end():
         driver.quit()
+
     request.addfinalizer(end)
     return driver
-```
-2. 用例
-
-```python
-# test_01.py文件
-
-from selenium import webdriver
-import time
-
-
-def test_yoyo_01(browser):
-
-    browser.get("https://www.cnblogs.com/yoyoketang/")
-    time.sleep(2)
-    t = browser.title
-    assert t == "上海-悠悠"
-
-# test_02.py文件
-
-from selenium import webdriver
-import time
-
-def test_yoyo_01(browser):
-
-    browser.get("https://www.cnblogs.com/yoyoketang/")
-    time.sleep(2)
-    t = browser.title
-    assert "上海-悠悠" in t
-```
-
-**展示报告**
-
-打开cmd，cd到用例的目录，执行指令
-`pytest --html=report.html --self-contained-html`
-
-3. 失败重试
-
-依赖pytest-rerunfailures插件，`pip install pytest-rerunfailures`
-
-用例失败再重跑1次,命令行加个参数--reruns即可
-`py.test --reruns 1 --html=report.html --self-contained-html`
