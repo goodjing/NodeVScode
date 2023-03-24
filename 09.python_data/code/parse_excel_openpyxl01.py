@@ -76,4 +76,22 @@ wsw['A3'] = 'data3'  # 修改A3
 # for columnsv in columns:  # 获取列的值
 #     print(columnsv.value, end=' ')  # 输出C列每一个cell对象
 
-# 获取多行或者多列的数据
+# 获取多行或者多列的数据['begin:end']
+# wb = load_workbook('test.xlsx')
+# ws = wb.active
+# # 获取第1行到第3行的数据
+# rows = ws['1:3']
+# print('----------row-----------')
+# for row in rows:
+#     for cell in row:
+#         print(cell.value, end=' ')
+#     print('\t')
+# # 获取A列到E列的数据
+# cols = ws['A:E']
+# print('---------column---------')
+# for col in cols:
+#     for cell in col:
+#         print(cell.value, end=' ')
+#     print('\t')
+
+
