@@ -95,4 +95,8 @@ interfaces config 的缩写，用来查看和配置网络设备
 
 ## [Linux命令总览](https://www.runoob.com/linux/linux-command-manual.html)
 
-## [常用Linux指令](02常用指令.md)
+## [常用Linux指令1](https://blog.csdn.net/OKCRoss/article/details/127055932)
+
+## [常用Linux指令2](https://blog.csdn.net/weixin_43908649/category_12090448.html)
+
+## [常用Linux指令3](https://blog.csdn.net/m0_64776928?type=blog)
